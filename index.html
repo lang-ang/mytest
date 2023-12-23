@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>8.6</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes fadeInUpTop {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up-top {
+            animation: fadeInUpTop 2s ease-in;
+        }
+
+        @keyframes fadeInUpBG {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in-up-top-bg {
+            animation: fadeInUpBG 1s ease-in;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(10%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp1 {
+            from {
+                opacity: 0;
+                transform: translateX(-10%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up-1 {
+            animation: fadeInUp1 2s ease-in;
+        }
+
+        @keyframes fadeInUp2 {
+            from {
+                opacity: 0;
+                transform: translateX(100%) rotate(20deg)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0) rotate(6deg)
+            }
+        }
+
+        .fade-in-up-2 {
+            animation: fadeInUp2 1s ease-out;
+        }
+
+        @media (min-width:50px) {
+            nav li {
+                width: auto;
+                list-style: none;
+                padding-top: 10px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center; /* 文本水平居中 */
+                position: relative;
+            }
+
+            nav ul {
+                border: none;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            nav li::after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: -15px;
+                width: 120%;
+                height: 1px;
+                box-shadow: 0 1px 0 #FFF; /* 使用 box-shadow 模拟横线，可以调整颜色和模糊度 */
+            }
+
+            footer {
+                clear: both;
+            }
+        }
+
+        @media (min-width:1024px) {
+            nav li {
+                width: auto;
+                list-style: none;
+                padding-top: 10px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center; /* 文本水平居中 */
+                position: relative;
+            }
+
+            nav ul {
+                border: none;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            nav li::after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: -15px;
+                width: 120%;
+                height: 1px;
+                box-shadow: 0 1px 0 #FFF; /* 使用 box-shadow 模拟横线，可以调整颜色和模糊度 */
+            }
+
+            nav {
+            }
+        }
+
+        header {
+            background-image: url(p1.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            text-align: center;
+            background-color: #7d9dca;
+            color: blue;
+            height: 120px;
+            grid-row: 1/2;
+            grid-column: 1/3;
+            font-size: 50px;
+        }
+
+        nav {
+            background-color: #B3c7e6;
+        }
+
+        main {
+            min-width: 20em;
+        }
+
+        aside {
+            background-color: #eaeaea;
+        }
+
+        h3 {
+            color: #7d9dca;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #7d9dca;
+        }
+
+        nav {
+            background-color: #B3C7E6;
+        }
+
+            nav a {
+                text-decoration: none;
+                text-align: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-weight: bold;
+            }
+
+        body {
+            margin: 0;
+        }
+
+        nav a:link {
+            color: #FFFFFF;
+        }
+
+        nav a:visited {
+            color: #EAEAEA;
+        }
+
+        nav a:hover {
+            color: #000066
+        }
+
+        @supports (display: grid) {
+            #wrapper {
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                grid-template-rows: 120px auto auto;
+            }
+
+            header {
+                grid-row: 1 / 2;
+                grid-column: 1 / 3;
+            }
+
+            nav {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+
+            main {
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+
+            footer {
+                grid-row: 3 / 4;
+                grid-column: 1 / 3;
+            }
+
+            img {
+                float: right;
+            }
+
+            main {
+                margin-left: 0;
+            }
+        }
+
+        .photo-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            transform: rotate(6deg);
+            width: 20em;
+            height:17em;
+            float: right;
+            position: relative;
+            top: 20px;
+            margin: 35px;
+            box-shadow: 10px 10px 20px rgba(1, 1, 1, 0.7);
+        }
+
+            .photo-container img {
+                display: block;
+                width: 100%;
+                height: auto;
+                float: right;
+            }
+
+            .photo-container::before {
+                content: "";
+                position: absolute;
+                top: 0; /* 边框距离图片顶部的距离 */
+                right: 0; /* 边框距离图片右侧的距离 */
+                bottom: 0; /* 边框距离图片底部的距离 */
+                left: 0; /* 边框距离图片左侧的距离 */
+                border: solid #fff; /* 边框的颜色和宽度 */
+            }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2px;
+            background-color: #fff; /* 字符背景颜色 */
+            text-align: center;
+        }
+
+        #text {
+            position: absolute;
+            font-size: 20px;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        header {
+            position: relative;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            section h1 {
+                margin: 0;
+                background-color: #3498db;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+            }
+
+            section h3 {
+                color: #3498db;
+            }
+
+            section p {
+                color: #555;
+            }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            margin: 20px initial;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        video, audio {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body id="wrapper">
+    <header class="fade-in-up-top-bg">
+        <span class="fade-in-up-top">My name is HeDeShuai</span>
+        <span id="text" class="fade-in-up-top">19558251213</span>
+    </header>
+    <nav class="fade-in-up-top-bg">
+        <ul>
+            <li class="fade-in-up-1"><a href="8.6.html" id="changeContentButton1">My Introduction</a></li>
+            <li class="fade-in-up-1"><a href="1.html" id="changeContentButton2">Education</a></li>
+            <li class="fade-in-up-1"><a href="1.html" id="changeContentButton3">Research and skills</a></li>
+            <li class="fade-in-up-1"><a href="1.html" id="changeContentButton4">Hobbies</a></li>
+        </ul>
+    </nav>
+    <main class="fade-in-up-top-bg" id="targetElement1">
+        <div class="photo-container fade-in-up-2">
+            <img src="hds.png" alt="p2">
+            <div class="caption">My fresh picture</div>
+        </div>
+        <h3 class="fade-in-up">Skills:</h3>
+        <p class="fade-in-up">I am good at programming and problem solving. Likes to analyze complex situations and figure out the best solutions. I have some experience in writing code and working with data, and I like to use technology to solve practical problems.</p>
+        <h3 class="fade-in-up">Interests:</h3>
+        <p class="fade-in-up">I am very interested in areas such as artificial intelligence, machine learning, and cybersecurity. In the computer science course, I especially enjoyed learning about algorithms and data structures, and I was also interested in software development and network architecture.</p>
+        <h3 class="fade-in-up">Experience:</h3>
+        <p class="fade-in-up">I am actively involved in computer science societies on campus and have participated in several programming competitions and projects. These experiences made me realize that I love the process of working as a team and working with others to solve technical problems.</p>
+        <p class="fade-in-up">Overall, I hope to work in the future related to artificial intelligence, data analytics, or cybersecurity. I love the innovation and challenges of technology, but also value teamwork and solving real problems.</p>
+    </main>
+    <footer class="fade-in-up-top-bg">ZJNU</footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <style>
+        form{
+            background-color: #e37171;
+            font-family: Arial, sans-serif;
+            width: 350px; padding: 10px;
+        }
+        label{
+            float: left;clear: left;
+            display: block;width: 100px;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+        input, textarea{
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="submit"]{
+            margin-left: 110px;
+        }
+        nav{
+            flex: none;
+            background-color: #B3C7E6;
+            order: 1;
+        }
+        main {
+            flex:6;
+            min-width: 20em;
+        background-color: #FFFFFF;
+        order: 2;
+            }
+        aside{
+            order: 3;
+            flex: 4;
+            background-color: #EAEAEA;
+        }
+
+        nav li{
+            display: inline;
+        }
+        nav  a   {
+            text-decoration: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+        nav a:link{
+            color: #FFFFFF;
+        }
+        nav a:visited{
+            color: #EAEAEA;
+        }
+        nav a:hover {
+            color: #000066
+        }
+        body {
+            background-color: #66CCFF
+        }
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: auto;
+            grid-gap: 10em; gap: 10em;
+        }
+        #content {
+            display: flex;
+        }
+        
+    </style>
+   
+</head>
+<body id="gallery">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>aospfkmoesmg</p>
+    </main>
+    <aside>
+        <img src="C:\Users\64271\Pictures\interlude_children.png" width="200" height="150" alt="luo" />
+    </aside>
+    <h1>
+        Join our Newsletter
+    </h1>
+    <form method="get">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="enter your phonenumber!" />
+        <br /><br />
+        <input type="submit" value="Dont sign me up!" /><input type="reset" />
+    </form>
+    <form method="get">
+        E-mail:<input type="text" name="email" id="email" />
+        <br />
+        <br />
+        Enter the password: <input type="password" maxlength="20" />
+        <br />
+        <br />
+        <input type="submit" value="Sign up!" /><input type="reset" />
+        <br />
+        <br />
+        <input type="submit" value="Enter the password!" /><input type="reset" />
+    </form>
+    <form>
+        First Name: <input type="text" name="fname" id="fname" />
+        <br />
+        <br />
+    </form>
+    <h1>Contact us</h1>
+    <form method="get">
+        <label>First Name: <input type="text" name="fname" id="fname" /></label>
+        <br />
+        <br />
+        <label>Last Name: <input type="text" name="lname" id="lname" /></label>
+        <br />
+        <br />
+        <label>E-mail: <input type="text" name="email" id="email" /></label>
+        <br />
+        <br />
+        <label for="comments">Comments:</label><br />
+        <textarea name="comments" id="comment" rows="4" cols="40"></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Contact" /> <input type="reset" />
+    </form>
+    <h1>Sign up for Text Messages</h1>
+    <form method="get">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" name="mobile" id="mobile" placeholder="enter your mobile number" /><br /><br />
+        <input type="submit" value="Text Me" /><input type="reset" />
+    </form>
+    <h1>Choose Your Favorite Color</h1>
+    <form method="get">
+        Favorite Color: <input type="text" name="color" id="color" />
+    </form>
+    <h1>Search</h1>
+</body>
+</html>

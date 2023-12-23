@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1.5s ease-out;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        section h1 {
+                margin: 0;
+                background-color: #3498db;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+        }
+
+        section h3 {
+                color: #3498db;
+        }
+
+        section p {
+            color: #555;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        video, audio {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="fade-in-up">
+        <main>
+
+            <section class="video-section">
+                <h2>Custom Video</h2>
+                <video controls>
+                    <source src="custom-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            <section class="audio-section">
+                <h2>Custom Audio</h2>
+                <audio controls>
+                    <source src="custom-audio.mp3" type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

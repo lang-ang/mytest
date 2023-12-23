@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    #content{
+        display: flex;
+    }
+    body{
+        background-color: blue;
+    }
+    nav{
+        flex: none;
+        background-color: #B3c7e6;
+        order: 1;
+    }
+    main{
+        flex: 6;
+        min-width: 20em;
+        background-color: #FFFFFF;
+        order: 2;
+    }
+    aside{
+        flex: 4;
+        background-color: #eaeaea;
+        order: 3;
+    }
+    header{
+        font-size: 50px;
+        background-image: url(p1.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        text-align: center;
+        background-color: #7d9dca;
+        color: blue;
+    }
+    h3{
+        color: #7d9dca;
+    }
+    footer {
+        text-align: center;
+        background-color: #7d9dca;
+
+    }
+</style>
+</head>
+<body>
+    <header>Lighthouse Bistro</header>
+    <span id="content">
+        <nav>
+            <ul>
+                <li>    <a href="1.html">Home</a>
+                <li>   <a href="1.html">Menu</a>
+                <li>   <a href="1.html">Directions</a>
+                <li>  <a href="1.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h3>it is a title</h2>
+            <p>it is a paragraph</p>
+            <h3>it is a title</h2>
+            <p>it is a paragraph</p>
+            <h3>it is a title</h2>
+            <p>it is a paragraph</p>
+        </main>
+        <aside>
+            <img src="p2.png" alt="p2" width="150" height="300" style="display: block; margin: 0 auto;">
+            <h5 style="text-align: center;">Cana Island LightHouse</h5>
+        </aside>
+    </span>
+    <footer>Copyright &copy; 2020</footer>
+</body>
+</html>
